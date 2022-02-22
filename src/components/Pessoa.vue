@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="paragrafo-pai">
         <Picture />
         <h2>Essa é a descrição da Pessoa: {{ nome }} </h2>
         <Info />

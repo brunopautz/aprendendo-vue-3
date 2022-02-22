@@ -41,3 +41,9 @@ export default {
     }
 }
 </script>
+
+<style>
+    .paragrafo-pai {
+        background-color: black;
+    }
+</style>
