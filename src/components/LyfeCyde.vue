@@ -14,11 +14,20 @@ export default {
         setTimeout(() => {
             this.nome = 'Bruno'
         }, 1000)
+
+        this.lyfeCyde()
     },
     mounted() {
          setTimeout(() => {
             this.nome = 'Joao'
         }, 2000)
+        this.lyfeCyde()
+
+    },
+    methods: {
+        lyfeCyde() {
+            console.log('executou');
+        }
     }
 }
 </script>
