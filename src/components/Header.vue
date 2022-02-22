@@ -5,13 +5,15 @@
             <li><a href="">Projeto</a></li>
             <li><a href="">Sobre</a></li>
             <li><a href="">Contato</a></li>
+            <li v-show="esta_logado"><a href="">Meu perfil</a></li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+    props: ['esta_logado']
 }
 </script>
 

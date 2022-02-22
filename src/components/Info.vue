@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p> {{ email }} </p>
         <p v-if="esta_trabalhando" >Estou trablhando no momento</p>
         <p v-else>Estou em busca de novas oportunidades</p>
         <p>Utilizo as seguintes tech para back end:</p>
@@ -21,11 +22,13 @@
 <script>
 export default {
     name: 'Info',
+    props : {
+        email : String,
+        esta_trabalhando : Boolean
+    },
     data() {
         return {
-            esta_trabalhando: false,
             mostra_email: false,
-            email: 'brunoppaytz@gmail.com',
             meu_link: 'https://google.com',
             textoBotao: 'Mostrar email',
             techs_back: ['PHP', 'PYTHON', 'C', 'Java'],

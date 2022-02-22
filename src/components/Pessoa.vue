@@ -2,7 +2,8 @@
     <div class="paragrafo-pai">
         <Picture />
         <h2>Essa é a descrição da Pessoa: {{ nome }} </h2>
-        <Info />
+        <!-- <Info  compoEmail = 'brunoteste@123' /> -->
+        <Info :email="email"  :esta_trabalhando=false />
         <Form />
     </div>
 </template>
@@ -24,7 +25,8 @@ export default {
     },
     data () {
         return {
-            nome: 'Bruno'
+            nome: 'Bruno',
+            email: 'brunboppautz@tesyagd'
         }
     }, 
 }
