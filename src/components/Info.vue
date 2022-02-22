@@ -1,0 +1,27 @@
+<template>
+    <div>
+        <p v-if="esta_trabalhando" >Estou trablhando no momento</p>
+        <p v-else>Estou em busca de novas oportunidades</p>
+        <p>Utilizo as seguintes tec:</p>
+        <ul>
+            <li>Javascript</li>
+            <li>PHP</li>
+            <li>Python</li>
+        </ul>
+
+        <p v-show="mostra_email">Contato: {{ email }}</p>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'Info',
+    data() {
+        return {
+            esta_trabalhando: false,
+            mostra_email: true,
+            email: 'brunoppaytz@gmail.com'
+        }
+    }
+}
+</script>
