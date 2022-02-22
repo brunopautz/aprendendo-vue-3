@@ -10,6 +10,7 @@
         </ul>
 
         <p v-show="mostra_email">Contato: {{ email }}</p>
+        <p>Para acessar meu portifolio <a v-bind:href="meu_link">basta clicar aqui</a></p>
     </div>
 </template>
 
@@ -20,7 +21,8 @@ export default {
         return {
             esta_trabalhando: false,
             mostra_email: true,
-            email: 'brunoppaytz@gmail.com'
+            email: 'brunoppaytz@gmail.com',
+            meu_link: 'https://google.com'
         }
     }
 }

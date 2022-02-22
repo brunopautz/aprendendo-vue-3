@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Picture />
         <h2>Essa é a descrição da Pessoa: {{ nome }} </h2>
         <Info />
         <Form />
@@ -10,13 +11,16 @@
 
 import Info from './Info.vue'
 import Form from './Form.vue'
+import Picture from './Picture.vue'
+
 
 
 export default {
     name: 'Pessoa',
     components: {
         Info,
-        Form
+        Form,
+        Picture
     },
     data () {
         return {
