@@ -2,11 +2,13 @@
     <div>
         <p v-if="esta_trabalhando" >Estou trablhando no momento</p>
         <p v-else>Estou em busca de novas oportunidades</p>
-        <p>Utilizo as seguintes tec:</p>
+        <p>Utilizo as seguintes tech para back end:</p>
+        <ul> 
+            <li v-for="(tech, index) in techs_back" v-bind:key="index">{{ tech }}</li>
+        </ul>
+        <p>Utilizo as seguintes tech para fornt</p>
         <ul>
-            <li>Javascript</li>
-            <li>PHP</li>
-            <li>Python</li>
+            <li v-for="tech in techs_front" :key="tech.id"> {{ tech.language }} </li>
         </ul>
         <div>
             <button @click="showEmail"> {{ textoBotao }} </button>
@@ -25,7 +27,14 @@ export default {
             mostra_email: false,
             email: 'brunoppaytz@gmail.com',
             meu_link: 'https://google.com',
-            textoBotao: 'Mostrar email'
+            textoBotao: 'Mostrar email',
+            techs_back: ['PHP', 'PYTHON', 'C', 'Java'],
+            techs_front: [
+                {id: 1, language: "Html"},
+                {id: 1, language: "Vue"},
+                {id: 1, language: "React"}
+            ],
+
         }
     },
     methods: {
